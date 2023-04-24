@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "KawaiiBubble-Regular";
+    src: url(../fonts/KawaiiBubble-Regular.ttf);
+}
+
+.center-image-container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+.center-link-text{
+    font-family: "KawaiiBubble-Regular", sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+.center-link-text :hover{
+    color: rgb(255, 0, 0);
+
+}
