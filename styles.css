@@ -69,7 +69,7 @@
   position: fixed;
   top: 58%; /* adjust to move up/down */
   left: 73%; /* adjust to move left/right */
-  transform: rotate(7deg); /* rotate image 11 degrees */
+  transform: rotate(10deg); /* rotate image 7 degrees */
 }
 
 .interval-timer-button {
@@ -86,6 +86,64 @@
   left: 15%; /* adjust to move left/right */
   transform: rotate(11deg); /* rotate image 11 degrees */
 }
+
+
+/* arcade button animation */
+.arcade-button img {
+  animation: scale 2s ease-in-out infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* boxing manual button animation */
+.boxing-manual-button img{
+  animation: scale 2s ease-in-out infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* interval timer button animation */
+.interval-timer-button img{
+  animation: scale 2s ease-in-out infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
 
 html,
 body {
