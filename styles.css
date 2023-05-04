@@ -69,14 +69,14 @@
   position: fixed;
   top: 58%; /* adjust to move up/down */
   left: 73%; /* adjust to move left/right */
-  transform: rotate(10deg); /* rotate image 7 degrees */
+  transform: rotate(-7deg); /* rotate image -7 degrees */
 }
 
 .interval-timer-button {
   position: fixed;
   top: 9%; /* adjust to move up/down */
   left: 13.5%; /* adjust to move left/right */
-  transform: rotate(-4deg); /* rotate image -4 degrees */
+  transform: rotate(-6deg); /* rotate image -4 degrees */
 }
 
 
@@ -141,10 +141,6 @@
 }
 
 
-
-
-
-
 html,
 body {
   height: 100%;
@@ -172,4 +168,21 @@ body {
 
 .image-row img:hover {
   border: 20px solid white;
+}
+
+
+.overlay {
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-image: url("/Images/OldCover.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none; /* Add this line */
 }

@@ -7,8 +7,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boxing Champion</title>
+
+    <script>
+const overlayImages = [
+  "/Images/OldCover.png",
+  "/Images/NewCover.png",
+  "/Images/AlternateCover.png"
+];
+
+let currentOverlayIndex = 0;
+
+setInterval(() => {
+  currentOverlayIndex = (currentOverlayIndex + 1) % overlayImages.length;
+  const currentOverlay = overlayImages[currentOverlayIndex];
+  document.querySelector('.overlay').style.backgroundImage = `url(${currentOverlay})`;
+}, 500);
+    </script>
+
+
+
+
+
+
+
 </head>
 <body>
+
+<!-- Old Fashioned Overlay --> 
+<div class="overlay">
+  </div>
+
 
 <!-- BackgroundImage -->
 <div id="backgroundScreen1"></div>
@@ -32,6 +60,8 @@
 <div class="button-container">
     <a href="modeSelect.html" class="button">START</a>
 </div>
+
+
 
 </body>
 </html>
