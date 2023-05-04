@@ -10,9 +10,15 @@
 
     <script>
         const overlayImages = [
-          "/Images/OldCover.png",
-          "/Images/OldCover2.png",
-          "/Images/OldCover3.png"
+        "/Images/OldCover.png",
+  "/Images/OldCover2.png",
+  "/Images/OldCover3.png",
+  "/Images/OldCover4.png",
+  "/Images/OldCover5.png",
+  "/Images/OldCover6.png",
+  "/Images/OldCover7.png",
+  "/Images/OldCover9.png"
+
         ];
         
         let currentOverlayIndex = 0;
@@ -21,7 +27,7 @@
           currentOverlayIndex = (currentOverlayIndex + 1) % overlayImages.length;
           const currentOverlay = overlayImages[currentOverlayIndex];
           document.querySelector('.overlay').style.backgroundImage = `url(${currentOverlay})`;
-        }, 500);
+        }, 300);
             </script>
 
 </head>
@@ -40,8 +46,8 @@
 <div class="image-row">
 
 <!-- Arcade Mode Option Pic -->
-    <img src="/Images/ArcadeModeOptionPic.png" alt ="ArcadeMode" 
-    width ="494" height ="696"> 
+<a href="arcade.html"><img src="/Images/ArcadeModeOptionPic.png" alt ="ArcadeMode" 
+    width ="494" height ="696"></a>
 
 <!-- Timer Mode Option Pic -->
 <a href="timer.html"><img src="/Images/TimerModeOptionPic.png" alt ="IntervalTimer" 

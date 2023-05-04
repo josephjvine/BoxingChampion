@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://www.onlinewebfonts.com/download/0be5c6995ec8d7d39979fdc933877a59" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boxing Champion</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://www.onlinewebfonts.com/download/0be5c6995ec8d7d39979fdc933877a59" rel="stylesheet">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boxing Champion</title>
 
-    <script>
+<script>
+
+//OverlayAnimations
 const overlayImages = [
-  "/Images/OldCover.png",
-  "/Images/OldCover2.png",
-  "/Images/OldCover3.png"
+"/Images/OldCover.png",
+"/Images/OldCover2.png",
+"/Images/OldCover3.png",
+"/Images/OldCover4.png",
+"/Images/OldCover5.png",
+"/Images/OldCover6.png",
+"/Images/OldCover7.png",
+"/Images/OldCover9.png"
 ];
 
 let currentOverlayIndex = 0;
-
 setInterval(() => {
-  currentOverlayIndex = (currentOverlayIndex + 1) % overlayImages.length;
-  const currentOverlay = overlayImages[currentOverlayIndex];
-  document.querySelector('.overlay').style.backgroundImage = `url(${currentOverlay})`;
-}, 500);
-    </script>
+currentOverlayIndex = (currentOverlayIndex + 1) % overlayImages.length;
+const currentOverlay = overlayImages[currentOverlayIndex];
+document.querySelector('.overlay').style.backgroundImage = `url(${currentOverlay})`;
+}, 300);
+
+</script>
 
 </head>
 <body>
 
+
 <!-- Old Fashioned Overlay --> 
 <div class="overlay">
-  </div>
-
+</div>
 
 <!-- BackgroundImage -->
 <div id="backgroundScreen1"></div>
 
 <!-- IntervalTimerImage -->
 <div class="interval-timer-button">
-    <a href="timer.html"> <img src="/Images/IntervalTimerSign1.png" alt="IntervalTimerSign1" width="312" height="327" class="interval-timer-button"> </a>
+<a href="timer.html"> <img src="/Images/IntervalTimerSign1.png" alt="IntervalTimerSign1" 
+width="312" height="327" class="interval-timer-button"> </a>
 </div>
 
 <!-- ArcadeModeSign1 -->
 <div class="arcade-button">
-    <img src="/Images/ArcadeModeSign1.png" alt="ArcadeModeSign1" width="296" height="349">
+<a href="arcade.html"> <img src="/Images/ArcadeModeSign1.png" alt="ArcadeModeSign1" width="296" height="349"> </a>
 </div>
 
 <!-- BoxingManualSign1 -->
 <div class="boxing-manual-button">
-    <img src="/Images/BoxingManualSign1.png" alt="BoxingManualSign1" width="331" height="348">
+<img src="/Images/BoxingManualSign1.png" alt="BoxingManualSign1" width="331" height="348">
 </div>
 
 <!-- Start Button --> 
 <div class="button-container">
-    <a href="modeSelect.html" class="button">START</a>
+<a href="modeSelect.html" class="button">START</a>
 </div>
-
-
 
 </body>
 </html>

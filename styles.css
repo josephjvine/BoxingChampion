@@ -40,6 +40,17 @@
   background-position: center;
 }
 
+#backgroundScreen4 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("/Images/ArcadeBackground.jpg");
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+}
+
 .button {
   background-color: #272727;
   font-family: "LTCBroadway", sans-serif;
@@ -105,33 +116,33 @@
 }
 
 @keyframes scale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+0% {
+transform: scale(1);
+}
+50% {
+transform: scale(1.1);
+}
+100% {
+transform: scale(1);
+}
 }
 
 
 /* boxing manual button animation */
 .boxing-manual-button img{
-  animation: scale 2s ease-in-out infinite;
+animation: scale 2s ease-in-out infinite;
 }
 
 @keyframes scale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+0% {
+transform: scale(1);
+}
+50% {
+transform: scale(1.1);
+}
+100% {
+transform: scale(1);
+}
 }
 
 /* interval timer button animation */
@@ -174,13 +185,14 @@ body {
 .image-row img {
   max-width: 100%;
   height: auto;
-  margin-top: 230px; /* Add some margin to the top */
+  margin-top: 230px;
 }
 
 .image-row img:hover {
   border: 20px solid white;
 }
 
+ /* animated overlay */
 
 .overlay {
   opacity: 0.4;
@@ -195,5 +207,24 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  pointer-events: none; /* Add this line */
+  pointer-events: none;
+}
+
+
+ /* timer */
+
+.timer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#timer {
+  font-size: 50px;
+  color: white;
+  position: absolute;
+  left: 48%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
