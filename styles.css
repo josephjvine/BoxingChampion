@@ -29,6 +29,17 @@
   background-position: center;
 }
 
+#backgroundScreen3 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("/Images/TimerModeBackground.jpg");
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+}
+
 .button {
   background-color: #272727;
   font-family: "LTCBroadway", sans-serif;
