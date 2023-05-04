@@ -8,6 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boxing Champion</title>
 
+    <script>
+        const overlayImages = [
+          "/Images/OldCover.png",
+          "/Images/OldCover2.png",
+          "/Images/OldCover3.png"
+        ];
+        
+        let currentOverlayIndex = 0;
+        
+        setInterval(() => {
+          currentOverlayIndex = (currentOverlayIndex + 1) % overlayImages.length;
+          const currentOverlay = overlayImages[currentOverlayIndex];
+          document.querySelector('.overlay').style.backgroundImage = `url(${currentOverlay})`;
+        }, 500);
+            </script>
+
 </head>
 <body>
 
