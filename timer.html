@@ -1,32 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+<meta charset="utf-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Boxing Champion</title>
+<title>Boxing Champion</title>
 
-    <link rel="stylesheet" href="styles.css">
-    <link href="Fonts/LTCBroadway.ttf" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/Images/Favicon.png">
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-  </head>
+<link rel="stylesheet" href="styles.css">
+<link href="Fonts/LTCBroadway.ttf" rel="stylesheet">
+<link href="Fonts/ComicsDeluxe.ttf" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="/Images/Favicon.png">
+<script src="libraries/p5.min.js"></script>
+<script src="libraries/p5.sound.min.js"></script>
 
-  <body>
+<script>
+const overlayImages = [
+"/Images/OldCover.png",
+"/Images/OldCover2.png",
+"/Images/OldCover3.png",
+"/Images/OldCover4.png",
+"/Images/OldCover5.png",
+"/Images/OldCover6.png",
+"/Images/OldCover7.png",
+"/Images/OldCover9.png"
 
+  ];
+  
+  let currentOverlayIndex = 0;
+  
+  setInterval(() => {
+    currentOverlayIndex = (currentOverlayIndex + 1) % overlayImages.length;
+    const currentOverlay = overlayImages[currentOverlayIndex];
+    document.querySelector('.overlay').style.backgroundImage = `url(${currentOverlay})`;
+  }, 300);
+      </script>
 
-    <div> <script src="js/main.js"></script> </div>
+</head>
+
+<body>
+
+<!-- Old Fashioned Overlay --> 
+<div class="overlay">
+</div>
 
 <!-- BackgroundImage -->
 <div id="backgroundScreen3"></div>
 
-
-    <!-- Back Button --> 
-<div class="button-container">
-  <a href="modeSelect.html" class="button">BACK</a>
+<!-- Timer Character Image -->
+<div class="timer-character">
+<img src="/Images/timerCharacter.png" alt="TimerCharacter" 
+width="854" height="612" class="interval-timer-button"> </a>
 </div>
 
-  </body>
+<!-- Timer Border Image -->
+<div class="timer-shape">
+  <img src="/Images/TimerShape.png" alt="TimerBorder" 
+  width="823" height="699" class="Ttimer-shape"> </a>
+  </div>
+
+<!-- Timer Instructions Image -->
+<div class="timer-instructions">
+<img src="/Images/TimerInstructions.png" alt="TimerInstructions" 
+width="789" height="383" class="timer-instructions"> </a>
+</div>
+
+<!-- ButtonsRow -->
+<div class="buttons-row">
+
+<!-- Start Timer Button -->
+<div class="start-timer-button">
+<img src="/Images/StartButton.png" alt="IntervalTimerSign1" onclick="start_timer"
+width="204" height="76" >
+</div>
+
+<!-- Pause Timer Button -->
+<div class="pause-timer-button">
+<img src="/Images/Pause Button.png" alt="IntervalTimerSign1"
+width="204" height="76" >
+</div>
+
+<!-- Reset Timer Button -->
+<div class="reset-timer-button">
+<img src="/Images/ResetButton.png" alt="IntervalTimerSign1" 
+width="204" height="76" >
+</div>
+
+</div>
+
+<!-- Input Timer -->
+<div> <label for="timerInput">Last name:</label>
+<input type="text" id="timerInput" name="Interval Length"><br><br> </div>
+
+<!-- Back Button --> 
+<div class="button-container">
+<a href="modeSelect.html" class="button">BACK</a>
+</div>
+
+<!--Timer Text-->
+<div class="timerTextDiv">
+<p id="timerText">10</p>
+<p id="wellDoneText" style="display: none;">Well Done!</p>
+</div>
+
+<div> <script src="js/main.js"></script> </div>
+
+</body>
 </html>

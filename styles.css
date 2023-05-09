@@ -7,6 +7,11 @@
   src: url(fonts/LTCBroadway.ttf);
 }
 
+@font-face {
+  font-family: "ComicsDeluxe";
+  src: url(fonts/ComicsDeluxe.ttf);
+}
+
 #backgroundScreen1 {
   position: fixed;
   width: 100%;
@@ -184,6 +189,7 @@ body {
 
 body {
   background-color: black;
+  overflow: hidden;
 }
 
 .image-row {
@@ -290,4 +296,124 @@ body {
     position: fixed;
     width: 1725px; 
     height: 895px;
+  }
+
+
+  .buttons-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+
+    position: relative;
+    left: 458px;
+    top: 733px;
+    transform: translateY(-50%);
+  }
+
+  .buttons-row img:hover {
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    -webkit-transform: scale(1); /* Chrome, Safari, Opera */
+    transform: scale(1);
+  }
+  
+  .buttons-row div {
+    text-align: center;
+  }
+
+  .timerTextDiv {
+    text-align: center;
+    font-family: "ComicsDeluxe", sans-serif;
+    text-shadow: 6px 6px #000000;
+    -webkit-text-stroke: 6px black; 
+    font-size: 144px;
+    color: white;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top:7%;
+    left: 65%;
+  }
+
+  .timer-character {
+    position: fixed;
+    top: 36%; /* adjust to move up/down */
+    left: 11.5%; /* adjust to move left/right */
+    transform: rotate(2.5deg); /* rotate image -7 degrees */
+  }
+
+  .timer-shape {
+    position: fixed;
+    top: 12%; /* adjust to move up/down */
+    left: 52%; /* adjust to move left/right */
+  }
+
+  .timer-instructions{
+    position: fixed;
+    top: 3.5%; /* adjust to move up/down */
+    left: 11%; /* adjust to move left/right */
+  }
+  
+  
+  /* arcade button animation */
+  .timer-instructions img {
+    animation: scale 2s ease-in-out infinite;
+  }
+  
+  @keyframes scale {
+  0% {
+  transform: scale(1);
+  }
+  50% {
+  transform: scale(1.05);
+  }
+  100% {
+  transform: scale(1);
+  }
+  }
+
+  input {
+    position: fixed;
+    top: 52.5%; /* adjust to move up/down */
+    left: 55%; /* adjust to move left/right */
+    width: 30%;
+    height: 90px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    font-size: 50px;
+    background-color: rgb(255, 255, 255);
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    font-family: "LTCBroadway", sans-serif;
+    text-align: center;
+    transition: 0.2s;
+    outline: none;
+  }
+ 
+  input:focus {
+    background-color: white;
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    outline:#ffffff solid 10px;;
+  }
+
+  .image-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+  
+  #random-image {
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
   }

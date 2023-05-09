@@ -36,24 +36,31 @@ document.querySelector('.overlay').style.backgroundImage = `url(${currentOverlay
 </head>
 <body>
 
-
-
 <!-- Old Fashioned Overlay --> 
 <div class="overlay">
 </div>
 
-<!-- Link To Arcade Mode --> 
-<div> <script src="js/arcade.js"></script> </div>
+<div class="image-container">
+<img id="random-image" src="Images/" alt="">
+</div>
+<button id="start-button">Start Game</button>
+
+
+
+
+
 
 
 <!-- BackgroundImage -->
 <div id="backgroundScreen4"></div>
 
-
 <!-- Back Button --> 
 <div class="button-container">
 <a href="modeSelect.html" class="button">BACK</a>
 </div>
+
+<!-- Link To Arcade Mode --> 
+<div> <script src="js/arcade.js"></script> </div>
 
 </body>
 </html>

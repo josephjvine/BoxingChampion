@@ -1,25 +1,33 @@
-let socket = new WebSocket("ws://192.168.1.2:80");
+var images = ['Images/Jab.png', 'Images/Cross.png', 'Images/LeftHook.png', 'Images/RightHook.png', 'Images/LeftUppercut.png', 'Images/RightUppercut.png'];
 
-socket.onopen = function(e) {
-  alert("[open] Connection established");
-  alert("Sending to server");
-  socket.send("My name is John");
-};
+var imageCount = 0;
+var maxImageCount = 15; // 1 minute / 4 seconds per image
+var intervalId;
 
-socket.onmessage = function(event) {
-  alert(`[message] Data received from server: ${event.data}`);
-};
+function showRandomImage() {
+  var randomIndex = Math.floor(Math.random() * images.length);
+  var randomImage = images[randomIndex];
+  var img = document.getElementById('random-image');
+  img.src = randomImage;
+  img.style.display = 'block';
+  setTimeout(hideImage, 4000);
+}
 
-socket.onclose = function(event) {
-  if (event.wasClean) {
-    alert(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+function hideImage() {
+  var img = document.getElementById('random-image');
+  img.style.display = 'none';
+  imageCount++;
+  if (imageCount < maxImageCount) {
+    intervalId = setInterval(showRandomImage, 4000);
   } else {
-    // e.g. server process killed or network down
-    // event.code is usually 1006 in this case
-    alert('[close] Connection died');
+    clearInterval(intervalId);
+    alert('Game over!');
   }
-};
+}
 
-socket.onerror = function(error) {
-  alert(`[error]`);
-};
+var startButton = document.getElementById('start-button');
+startButton.addEventListener('click', function() {
+  imageCount = 0;
+  showRandomImage();
+  intervalId = setInterval(showRandomImage, 4000);
+});
