@@ -345,6 +345,13 @@ body {
     transform: rotate(2.5deg); /* rotate image -7 degrees */
   }
 
+  .arcade-character {
+    position: fixed;
+    top: 36%; /* adjust to move up/down */
+    left: 13.5%; /* adjust to move left/right */
+    transform: rotate(2.5deg); /* rotate image -7 degrees */
+  }
+
   .timer-shape {
     position: fixed;
     top: 12%; /* adjust to move up/down */
