@@ -30,7 +30,7 @@ function setRandomImage(){
   clearInterval(intervalId)
   count++;
   if (count < 12){
-    intervalId = setInterval( setRandomImage, 4000);
+    intervalId = setInterval( setRandomImage, 2500);
   console.log("run")
   }
   

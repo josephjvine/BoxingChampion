@@ -447,23 +447,10 @@ body {
     top:50px;
     margin: 0 auto;
     opacity: 1; /* start with full opacity */
- 
-    animation: blink 5s linear infinite;
-  }
-
-  @keyframes blink {
-    70% {
-      opacity: 1;
-    }
-    30% {
-      opacity: 0;
-    }
-
   }
   
 
   #random-image {
-
     max-width: 50%;
   }
   
