@@ -36,15 +36,27 @@ document.querySelector('.overlay').style.backgroundImage = `url(${currentOverlay
 </head>
 <body>
 
+
+
 <!-- Old Fashioned Overlay --> 
 <div class="overlay">
 </div>
 
-<div class="image-container">
-<img id="random-image" src="Images">
-</div>
-<button id="start-button">Start Game</button>
 
+
+<!-- Arcade Border Image -->
+<div class="timer-shape">
+<img src="/Images/TimerShape.png" alt="TimerBorder" 
+width="823" height="699" class="Ttimer-shape"> </a>
+</div>
+
+<div class="random-image-container">
+    <img id="random-image" src="Images">
+    </div>
+
+<!-- StartGameButton -->
+<div class="startGameButton-container"> 
+<button class="startGameButton" id="start-button">START GAME</button></div>
 
 <!-- BackgroundImage -->
 <div id="backgroundScreen4"></div>
@@ -55,12 +67,11 @@ document.querySelector('.overlay').style.backgroundImage = `url(${currentOverlay
 width="634" height="638" class="interval-timer-button"> </a>
 </div>
     
-<!-- Timer Instructions Image -->
+<!-- Arcade Instructions Image -->
 <div class="timer-instructions">
-<img src="/Images/ArcadeInstructions.png" alt="TimerInstructions" 
+<img src="/Images/arcadeModeInfo.png" alt="TimerInstructions" 
 width="789" height="383" class="timer-instructions"> </a>
-</div>
-      
+</div> 
 
 <!-- Back Button --> 
 <div class="button-container">
@@ -68,7 +79,7 @@ width="789" height="383" class="timer-instructions"> </a>
 </div>
 
 <!-- Link To Arcade Mode --> 
-<div> <script src="js/arcade.js"></script> </div>
+<div id="setRandomImage"> <script src="js/arcade.js"></script> </div>
 
 </body>
 </html>

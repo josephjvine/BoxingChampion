@@ -1,33 +1,38 @@
-var images = ['Images/Jab.png', 'Images/Cross.png', 'Images/LeftHook.png', 'Images/RightHook.png', 'Images/LeftUppercut.png', 'Images/RightUppercut.png'];
 
-var imageCount = 0;
-var maxImageCount = 15; // 1 minute / 4 seconds per image
 var intervalId;
 
-function showRandomImage() {
-  var randomIndex = Math.floor(Math.random() * images.length);
-  var randomImage = images[randomIndex];
-  var img = document.getElementById('random-image');
-  img.src = randomImage;
-  img.style.display = 'block';
-  setTimeout(hideImage, 4000);
+function setup() {
+  const startButton = select("#start-button");
+  startButton.mouseClicked(setRandomImage);
 }
 
-function hideImage() {
-  var img = document.getElementById('random-image');
-  img.style.display = 'none';
-  imageCount++;
-  if (imageCount < maxImageCount) {
-    intervalId = setInterval(showRandomImage, 4000);
-  } else {
-    clearInterval(intervalId);
-    alert('Game over!');
+var intervalId;
+
+function setRandomImage(){
+  var count = 0;
+  const images = [
+    "Images/jab.png",
+    "Images/cross.png",
+    "Images/lefthook.png",
+    "Images/righthook.png",
+    "Images/leftuppercut.png",
+    "Images/rightuppercut.png"
+  ];
+
+  const imgElement = document.querySelector("#random-image");
+  const randomImage = images[Math.floor(Math.random() * images.length)];
+  const img = document.createElement("img");
+  imgElement.src = randomImage;
+  imgElement.classList.add("centered-image"); // Apply centered-image class
+  imgElement.style.animation = "anim2 2s 2s forward";
+ 
+
+  clearInterval(intervalId)
+  count++;
+  if (count < 12){
+    intervalId = setInterval( setRandomImage, 4000);
+  console.log("run")
   }
-}
+  
 
-var startButton = document.getElementById('start-button');
-startButton.addEventListener('click', function() {
-  imageCount = 0;
-  showRandomImage();
-  intervalId = setInterval(showRandomImage, 4000);
-});
+}

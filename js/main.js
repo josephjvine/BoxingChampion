@@ -14,7 +14,6 @@ function setup() {
 
         //window.start_timer = start_timer;
         timerText = document.getElementById("timerText");
-
         wellDoneText = document.getElementById("wellDoneText");
 
 
@@ -106,7 +105,7 @@ if(newTimerLength>0){
 
     //timer complete text
     if (timerComplete){
-        wellDoneText.style.display='block'
+        wellDoneText.style.display='flex'
     }
 
 

@@ -298,7 +298,6 @@ body {
     height: 895px;
   }
 
-
   .buttons-row {
     display: flex;
     justify-content: center;
@@ -336,6 +335,22 @@ body {
     justify-content: center;
     top:7%;
     left: 65%;
+  }
+
+  .timerTextDivWellDone {
+    text-align: center;
+    font-family: "ComicsDeluxe", sans-serif;
+    text-shadow: 6px 6px #000000;
+    -webkit-text-stroke: 6px black; 
+    font-size: 95px;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top:29%;
+    left: 55.5%;
   }
 
   .timer-character {
@@ -411,16 +426,75 @@ body {
     outline:#ffffff solid 10px;;
   }
 
-  .image-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
+.random-image{
+  opacity:100%;
+}
+
+  .random-image-container {
+    width:900px;
+    position: absolute;
+    top: 16%; /* adjust to move up/down */
+    left: 50%; /* adjust to move left/right */
+    color: #e20000;
+  }
+
+  .centered-image {
+    position: flex;
+    display: flex;
+    width: 450px;
+    height:450px; 
+    left:50px;
+    top:50px;
+    margin: 0 auto;
+    opacity: 1; /* start with full opacity */
+    transition: opacity 0s linear 2s; /* set transition to 0 seconds delay and 2 seconds duration */
+  }
+
+  @keyframes fade-out-in {
+    0% {
+      opacity: 1;
+    }
+    66.6% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   
+
   #random-image {
-    width: 400px;
-    height: 400px;
-    border: 2px solid black;
+
+    max-width: 50%;
   }
+  
+  .startGameButton {
+    background-color: #e20000;
+    top:40%;
+    left:40%;
+    font-family: "LTCBroadway", sans-serif;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 63px;
+    border-radius: 12px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+  }
+
+  .startGameButton:hover {
+    background-color: white;
+    color: #272727;
+    border: 2px solid #ffffff;
+  }
+  
+  .startGameButton-container {
+    position: absolute;
+    top: 67%; /* adjust to move up/down */
+    left: 70%; /* adjust to move left/right */
+    transform: translate(-50%, -50%);
+  }
+  
