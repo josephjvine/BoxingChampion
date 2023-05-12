@@ -447,19 +447,18 @@ body {
     top:50px;
     margin: 0 auto;
     opacity: 1; /* start with full opacity */
-    transition: opacity 0s linear 2s; /* set transition to 0 seconds delay and 2 seconds duration */
+ 
+    animation: blink 5s linear infinite;
   }
 
-  @keyframes fade-out-in {
-    0% {
+  @keyframes blink {
+    70% {
       opacity: 1;
     }
-    66.6% {
+    30% {
       opacity: 0;
     }
-    100% {
-      opacity: 1;
-    }
+
   }
   
 
